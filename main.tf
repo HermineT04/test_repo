@@ -132,13 +132,6 @@ resource "aws_instance" "web-server-instance" {
     network_interface_id = aws_network_interface.web-server-nic.id
   }
 
-  user_data = <<-EOF
-              #!/bin/bash
-              sudo apt update -y
-              sudo apt install apache2 -y
-              sudo systemctl start apache2
-              sudo bash -c 'echo your very first web server > /var/wwww/html/index.html'
-              EOF
   tags = {
     Name = "webserver"
   }
