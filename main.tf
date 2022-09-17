@@ -133,6 +133,6 @@ resource "aws_instance" "web-server-instance" {
   }
 
   tags = {
-    Name = "webserver1"
+    Name = "webserver"
   }
 }
